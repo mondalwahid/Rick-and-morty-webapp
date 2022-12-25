@@ -17,7 +17,7 @@ export const CharacterImageContainer = styled('div')({
 })
 
 export const CharacterDetailsContainer = styled('div')({
-    marginLeft:".8rem"
+    margin:"0 .8rem",
 });
 
 export const StatusAndSpeciesContainer = styled('div')({

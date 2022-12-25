@@ -2,7 +2,7 @@ import React from 'react'
 import { useEpisodeDataQuery } from '../../../../Redux/ApiSlices/episodeApi';
 import { CardContainer, CharacterImageContainer, CharacterDetailsContainer, StatusAndSpeciesContainer, StatusIcon, CardContentHeader, CardContentText } from './styles'
 
-const Singlecharactercard = ({ name, image, status, species, gender, location, firstSeen }) => {
+const Singlecharactercard = ({ name, image, status, species, gender, location, firstSeen, origin }) => {
     const { data: episodeData } = useEpisodeDataQuery({ episodeNumber: firstSeen.split('/').slice(-1)[0] })
     return (
             <CardContainer>
@@ -28,7 +28,7 @@ const Singlecharactercard = ({ name, image, status, species, gender, location, f
                         <p style={{ margin: 0, color: "#fff" }}>{status} - {species}</p>
                     </StatusAndSpeciesContainer>
 
-                    {/* Gender */}
+                    {/* Gender and origin */}
                     <div>
                         <p style={{ margin: "15px 0 5px 0", color: "#8d8d8e", }}>Gender:</p>
                         <h4 style={{ color: "#fff", marginTop: 5 }}>{gender}</h4>

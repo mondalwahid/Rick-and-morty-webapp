@@ -19,7 +19,9 @@ const Cards = ({ characterData }) => {
                     {characterData?.results.filter((card) => card.name.toLowerCase().includes(search.toLowerCase())).map((e) => {
                         return (
                             <MainGrid key={e.id} item xs={12} sm={12} md={6} lg={3}>
-                                <Singlecharactercard name={e.name} image={e.image} status={e.status} species={e.species} gender={e.gender} location={e.location.name} firstSeen={e.episode[0]} />
+                                
+                            {/* Passing required elements as props */}
+                            <Singlecharactercard origin={e.origin.name} name={e.name} image={e.image} status={e.status} species={e.species} gender={e.gender} location={e.location.name} firstSeen={e.episode[0]} />
                             </MainGrid>
                         )
                     })}

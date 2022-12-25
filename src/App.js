@@ -3,9 +3,7 @@ import Grid from './Components/Grid/Grid'
 
 const App = () => {
   return (
-    <>
-    <Grid />
-    </>
+  <Grid />
   )
 }
 

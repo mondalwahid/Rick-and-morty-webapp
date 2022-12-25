@@ -11,7 +11,7 @@ const Grid = () => {
 
     const handlePagination = (props, page) => {
     setPage(page);
-    }
+    };
 
     
 
